@@ -41,10 +41,19 @@ export class Haiku {
     return sum;
   }
 
-
   silentVowelCounter(word) {
     let splitWord = word.split("");
     if (splitWord[splitWord.length - 1] === "e") {
+      return true;
+    }
+  }
+
+  diphthongChecker(word) {
+    let splitWord = word.split("");
+    console.log(splitWord);
+    let diphthongArray = ["ei", "ai", "au", "oi", "ou"];
+
+    if (splitWord.match(diphthongArray)) {
       return true;
     }
   }
