@@ -21,4 +21,20 @@ export class Haiku {
     })
     return multConsonant;
   }
+
+  vowelCounter(lineOne) {
+    let words = [];
+    words = lineOne.split(" ");
+
+    let tempArray = [];
+    let regexp = /[aeiouy]/gi;
+
+    words.forEach(function(word) {
+        if (word.match(regexp)) {
+          tempArray = (word.match(regexp))
+          console.log(tempArray);
+        }
+      })
+    return tempArray.length;
+  }
 }
