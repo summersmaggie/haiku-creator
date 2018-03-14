@@ -27,4 +27,9 @@ describe('Haiku', function() {
     let newHaiku = new Haiku("love", "lineTwo", "lineThree")
     expect(newHaiku.silentVowelCounter("love")).toEqual(true)
   });
+
+  it("should ignore diphthongs", function() {
+    let newHaiku = new Haiku("ouija", "lineTwo", "lineThree")
+    expect(newHaiku.diphthongChecker("ouija")).toEqual(true)
+  });
 });

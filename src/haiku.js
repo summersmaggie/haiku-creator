@@ -49,11 +49,10 @@ export class Haiku {
   }
 
   diphthongChecker(word) {
-    let splitWord = word.split("");
-    console.log(splitWord);
-    let diphthongArray = ["ei", "ai", "au", "oi", "ou"];
+    let diphthongArray = ("ei", "ai", "au", "oi", "ou");
 
-    if (splitWord.match(diphthongArray)) {
+    if (word.match(diphthongArray)) {
+      console.log(word);
       return true;
     }
   }
