@@ -22,4 +22,9 @@ describe('Haiku', function() {
     let newHaiku = new Haiku("epicodus is bananas", "lineTwo", "lineThree")
     expect(newHaiku.vowelCounter("epicodus is bananas")).toEqual(8)
   });
+
+  it("should ignore silent vowels", function() {
+    let newHaiku = new Haiku("love", "lineTwo", "lineThree")
+    expect(newHaiku.silentVowelCounter("love")).toEqual(true)
+  });
 });

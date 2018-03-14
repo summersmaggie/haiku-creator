@@ -35,10 +35,18 @@ export class Haiku {
         if (word.match(regexp)) {
           tempArray = (word.match(regexp))
           resultArray.push(tempArray.length);
-
           sum = resultArray.reduce((a, b) => a + b , 0);
         }
       })
     return sum;
   }
+
+
+  silentVowelCounter(word) {
+    let splitWord = word.split("");
+    if (splitWord[splitWord.length - 1] === "e") {
+      return true;
+    }
+  }
+
 }
