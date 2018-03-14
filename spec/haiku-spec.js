@@ -9,8 +9,14 @@ describe('Haiku', function() {
   });
 
   it('should test whether each line has more than two consonants in a row', function() {
-    let newHaiku = new Haiku("this buffet is awesome", "lineTwo", "lineThree")
-    expect(newHaiku.checkConsonant("this buffet is awesome")).toEqual(true)
+    let newHaiku = new Haiku("epicodus", "lineTwo", "lineThree")
+    expect(newHaiku.checkConsonant("epicodus")).toEqual(["epicodus"])
+    console.log(newHaiku);
   });
+
+  // it('should test whether each word in a line has more than two consonants in a row', function() {
+  //   let newHaiku = new Haiku("the buffet is awesome", "lineTwo", "lineThree")
+  //   expect(newHaiku.checkConsonant("the buffet is awesome")).toEqual(false)
+  // });
 
 });
