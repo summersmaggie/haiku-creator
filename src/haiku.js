@@ -26,15 +26,19 @@ export class Haiku {
     let words = [];
     words = lineOne.split(" ");
 
+    let resultArray = [];
     let tempArray = [];
+    let sum = 0;
     let regexp = /[aeiouy]/gi;
 
     words.forEach(function(word) {
         if (word.match(regexp)) {
           tempArray = (word.match(regexp))
-          console.log(tempArray);
+          resultArray.push(tempArray.length);
+
+          sum = resultArray.reduce((a, b) => a + b , 0);
         }
       })
-    return tempArray.length;
+    return sum;
   }
 }

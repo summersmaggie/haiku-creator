@@ -18,4 +18,8 @@ describe('Haiku', function() {
     expect(newHaiku.vowelCounter("epicodus")).toEqual(4)
   });
 
+  it('will return number of vowels in a line', function() {
+    let newHaiku = new Haiku("epicodus is bananas", "lineTwo", "lineThree")
+    expect(newHaiku.vowelCounter("epicodus is bananas")).toEqual(8)
+  });
 });
