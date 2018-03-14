@@ -9,8 +9,8 @@ describe('Haiku', function() {
   });
 
   it('should test whether each line has more than two consonants in a row', function() {
-    let newHaiku = new Haiku("epicodus", "lineTwo", "lineThree")
-    expect(newHaiku.checkConsonant("epicodus")).toEqual(["epicodus"])
+    let newHaiku = new Haiku("epicodus buffet", "lineTwo", "lineThree")
+    expect(newHaiku.checkConsonant("epicodus buffet")).toEqual(["buffet"])
     console.log(newHaiku);
   });
 

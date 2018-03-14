@@ -7,18 +7,18 @@ export class Haiku {
 
   checkConsonant(lineOne) {
 
-    let lineArray = [];
-    lineArray = lineOne.split(" ");
-    let arrayLength = lineArray.length
+    let words = [];
+    words = lineOne.split(" ");
+    // let arrayLength = words.length
     let multConsonant = [];
     let noMultConsonant = [];
 
-    for (let i = 0; i < arrayLength; i++) {
-      if (/[qwrtypsdfghjklzxcvbnm]{2,}/i.test(lineArray[i])) {
-        multConsonant.push(lineArray[i]);
+    words.forEach(function(word) {
+      if (/[qwrtypsdfghjklzxcvbnm]{2,}/i.test(word)) {
+        multConsonant.push(word);
       } else
-        noMultConsonant.push(lineArray[i]);
-        console.log(noMultConsonant);
-    }
+        noMultConsonant.push(word);
+    })
+    return multConsonant;
   }
 }
