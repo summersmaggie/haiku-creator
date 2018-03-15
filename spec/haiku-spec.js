@@ -43,8 +43,8 @@ describe('Haiku', function() {
     expect(newHaiku.vowelCounter("consolidate")).toEqual(4)
   });
 
-  it("should check that line one has only 5 syllables", function() {
-    let newHaiku = new Haiku("rainbows are awesome", "lineTwo", "lineThree")
-    expect(newHaiku.vowelCounter("rainbows are awesome")).toEqual(5)
-  });
+  // it("should check that line one has only 5 syllables", function() {
+  //   let newHaiku = new Haiku("one two three four five", "lineTwo", "lineThree")
+  //   expect(newHaiku.haikuChecker("one two three four five")).toEqual(true)
+  // });
 });

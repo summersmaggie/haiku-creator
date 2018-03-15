@@ -36,7 +36,7 @@ export class Haiku {
           vowelsArray = (word.match(regexp))
           wordVowels = vowelsArray.length;
         }
-        if (word.includes("ei" || "ai" || "au" || "oi" || "ou")) {
+        if (word.includes("ei" || "ai" || "au" || "oi" || "ou" || "ea")) {
           wordVowels = wordVowels - 1;
         }
         let splitWord = word.split("");
@@ -48,12 +48,4 @@ export class Haiku {
       syllables = totalArray.reduce((a, b) => a + b , 0);
     return syllables;
   }
-
-  // haikuChecker(lineOne, lineTwo, lineThree) {
-  //   something = lineOne.vowelCounter()
-  //
-  //
-  //   if lineOne === 5
-  //
-  // }
 }

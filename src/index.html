@@ -5,16 +5,22 @@
   </head>
   <body>
     <div class="container">
-    <h1>Journal in Javascript</h1>
-    <form id="entry-form">
-      <label for="title">Entry Title</label>
-      <input id="title" type="text" autocomplete="off">
-      <label for="body">Entry Text</label>
-      <input id="body" type="text" autocomplete="off">
+    <h1>Haiku Checker</h1>
+    <form id="haiku-form">
+      <label for="lineone">Line One</label>
+      <input id="lineone" type="text" autocomplete="off">
+      <label for="linetwo">Line Two</label>
+      <input id="linetwo" type="text" autocomplete="off">
+      <label for="linethree">Line Three</label>
+      <input id="linethree" type="text" autocomplete="off">
       <button type="submit">Submit</button>
     </form>
 
-    <div id="solution">
+    <div id="show-output">
+      <ul>
+      <li><span class="lineone"></span></li>
+      <li><span class="line-one-syllables"></span></li>
+      </ul>
     </div>
 
   </div>
