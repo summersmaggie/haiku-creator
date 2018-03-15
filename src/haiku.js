@@ -48,4 +48,12 @@ export class Haiku {
       syllables = totalArray.reduce((a, b) => a + b , 0);
     return syllables;
   }
+
+  // haikuChecker(lineOne, lineTwo, lineThree) {
+  //   something = lineOne.vowelCounter()
+  //
+  //
+  //   if lineOne === 5
+  //
+  // }
 }

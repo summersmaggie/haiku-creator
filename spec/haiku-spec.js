@@ -42,4 +42,9 @@ describe('Haiku', function() {
     let newHaiku = new Haiku("consolidate", "lineTwo", "lineThree")
     expect(newHaiku.vowelCounter("consolidate")).toEqual(4)
   });
+
+  it("should check that line one has only 5 syllables", function() {
+    let newHaiku = new Haiku("rainbows are awesome", "lineTwo", "lineThree")
+    expect(newHaiku.vowelCounter("rainbows are awesome")).toEqual(5)
+  });
 });
