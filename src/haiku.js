@@ -25,26 +25,27 @@ export class Haiku {
     let words = [];
     words = lineOne.split(" ");
 
-    let resultArray = [];
-    let tempArray = [];
-    let vowels = 0;
+    let totalArray = [];
+    let vowelsArray = [];
+    let wordVowels = 0;
     let regexp = /[aeiouy]/gi;
+    let syllables = 0;
 
     words.forEach(function(word) {
         if (word.match(regexp)) {
-          tempArray = (word.match(regexp))
-          resultArray.push(tempArray.length);
-          vowels = resultArray.reduce((a, b) => a + b , 0);
+          vowelsArray = (word.match(regexp))
+          wordVowels = vowelsArray.length;
         }
         if (word.includes("ei" || "ai" || "au" || "oi" || "ou")) {
-          vowels = vowels - 1;
-          console.log(vowels);
+          wordVowels = wordVowels - 1;
         }
         let splitWord = word.split("");
         if (splitWord[splitWord.length - 1] === "e") {
-          vowels = vowels - 1;
+          wordVowels = wordVowels - 1;
         }
+        totalArray.push(wordVowels);
       })
-    return vowels;
+      syllables = totalArray.reduce((a, b) => a + b , 0);
+    return syllables;
   }
 }

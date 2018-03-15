@@ -13,6 +13,11 @@ describe('Haiku', function() {
     expect(newHaiku.checkConsonant("epicodus buffet")).toEqual(["buffet"])
   });
 
+  it('should test whether a silent e is caught in a sentence', function() {
+    let newHaiku = new Haiku("this love is real", "lineTwo", "lineThree")
+    expect(newHaiku.vowelCounter("this love is real")).toEqual(5)
+  });
+
   it('will return number of vowels in a word', function() {
     let newHaiku = new Haiku("epicodus", "lineTwo", "lineThree")
     expect(newHaiku.vowelCounter("epicodus")).toEqual(4)
