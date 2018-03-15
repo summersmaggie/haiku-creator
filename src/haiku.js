@@ -36,22 +36,15 @@ export class Haiku {
           resultArray.push(tempArray.length);
           vowels = resultArray.reduce((a, b) => a + b , 0);
         }
-        let splitWord = word.split("");
-        if (splitWord[splitWord.length - 1] === "e") {
+        if (word.includes("ei" || "ai" || "au" || "oi" || "ou")) {
           vowels = vowels - 1;
           console.log(vowels);
         }
+        let splitWord = word.split("");
+        if (splitWord[splitWord.length - 1] === "e") {
+          vowels = vowels - 1;
+        }
       })
-      return vowels;
+    return vowels;
   }
-
-  diphthongChecker(word) {
-    let diphthongArray = ("ei", "ai", "au", "oi", "ou");
-
-    if (word.match(diphthongArray)) {
-      console.log(word);
-      return true;
-    }
-  }
-
 }
