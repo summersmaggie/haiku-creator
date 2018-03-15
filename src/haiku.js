@@ -28,7 +28,7 @@ export class Haiku {
     let totalArray = [];
     let vowelsArray = [];
     let wordVowels = 0;
-    let regexp = /[aeiouy]/gi;
+    let regexp = /[aeiou]/gi;
     let syllables = 0;
 
     words.forEach(function(word) {

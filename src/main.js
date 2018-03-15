@@ -1,4 +1,4 @@
-import { Haiku } from  '../src/haiku.js';
+import { Haiku } from '../src/haiku.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,10 +14,14 @@ $(document).ready(function() {
     let newHaiku = new Haiku(lineOne, lineTwo, lineThree);
 
     var lineOneSyllables = newHaiku.vowelCounter(lineOne);
-    // var lineTwoSyllables = newHaiku.lineTwo.vowelCounter();
-    // var lineThreeSyllables = newHaiku.lineThree.vowelCounter();
+    var lineTwoSyllables = newHaiku.vowelCounter(lineTwo);
+    var lineThreeSyllables = newHaiku.vowelCounter(lineThree);
 
     $("#show-output").show();      $(".lineone").text(newHaiku.lineOne);
+    $(".linetwo").text(newHaiku.lineTwo);
+    $(".linethree").text(newHaiku.lineThree);
     $(".line-one-syllables").text(lineOneSyllables);
+    $(".line-two-syllables").text(lineTwoSyllables);
+    $(".line-three-syllables").text(lineThreeSyllables);
   });
 });
