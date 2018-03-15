@@ -25,11 +25,16 @@ describe('Haiku', function() {
 
   it("should ignore silent vowels", function() {
     let newHaiku = new Haiku("love", "lineTwo", "lineThree")
-    expect(newHaiku.silentVowelCounter("love")).toEqual(true)
+    expect(newHaiku.vowelCounter("love")).toEqual(1)
   });
 
   it("should ignore diphthongs", function() {
     let newHaiku = new Haiku("ouija", "lineTwo", "lineThree")
     expect(newHaiku.diphthongChecker("ouija")).toEqual(true)
+  });
+
+  it("should give the correct amount of vowels when a silent e is present", function() {
+    let newHaiku = new Haiku("consolidate", "lineTwo", "lineThree")
+    expect(newHaiku.vowelCounter("consolidate")).toEqual(4)
   });
 });

@@ -6,7 +6,6 @@ export class Haiku {
 }
 
   checkConsonant(lineOne) {
-
     let words = [];
     words = lineOne.split(" ");
     // let arrayLength = words.length
@@ -28,24 +27,22 @@ export class Haiku {
 
     let resultArray = [];
     let tempArray = [];
-    let sum = 0;
+    let vowels = 0;
     let regexp = /[aeiouy]/gi;
 
     words.forEach(function(word) {
         if (word.match(regexp)) {
           tempArray = (word.match(regexp))
           resultArray.push(tempArray.length);
-          sum = resultArray.reduce((a, b) => a + b , 0);
+          vowels = resultArray.reduce((a, b) => a + b , 0);
+        }
+        let splitWord = word.split("");
+        if (splitWord[splitWord.length - 1] === "e") {
+          vowels = vowels - 1;
+          console.log(vowels);
         }
       })
-    return sum;
-  }
-
-  silentVowelCounter(word) {
-    let splitWord = word.split("");
-    if (splitWord[splitWord.length - 1] === "e") {
-      return true;
-    }
+      return vowels;
   }
 
   diphthongChecker(word) {
